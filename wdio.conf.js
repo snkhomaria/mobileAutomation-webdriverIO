@@ -1,11 +1,11 @@
 const path = require('path')
 
-export const config = {
+exports.config = {
     //
     // ====================
     // Runner Configuration
     // ====================
-    // WebdriverIO supports running e2e tests as well as unit and component tests.
+    // // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
     path : '/wd/hub',
     port : 4723,
@@ -59,8 +59,8 @@ export const config = {
     capabilities: [{
         platformName                : "Android",
         "appium:automationName"     : 'UiAutomator2',
-        "appium:deviceName"         : '<INSERT DEVICE NAME>',
-        "appium:platformVersion"    : '11.0',
+        "appium:deviceName"         : 'Pixel 8 API 29',
+        "appium:platformVersion"    : '10.0',
         "appium:app"                : path.join(process.cwd(),'./test/apk/ApiDemos-debug.apk'),
         "appium:appPackage"         : "io.appium.android.apis",
         "appium:appActivity"        : ".ApiDemos",
@@ -98,7 +98,7 @@ export const config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://127.0.0.1',
+    baseUrl: 'http://0.0.0.0',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -119,7 +119,7 @@ export const config = {
             'appium',
             {
                 args : {
-                    address : '127.0.0.1',
+                    address : '0.0.0.0',
                     port    : 4723,
                 },
                 logPath : './log',
@@ -306,4 +306,4 @@ export const config = {
     */
     // onReload: function(oldSessionId, newSessionId) {
     // }
-}
+};
