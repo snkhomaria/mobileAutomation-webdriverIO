@@ -1,4 +1,4 @@
-# sanber-mobileAutomation
+# Final Project Mobile Automation using WebdriverIO
 
 How to Start
 
